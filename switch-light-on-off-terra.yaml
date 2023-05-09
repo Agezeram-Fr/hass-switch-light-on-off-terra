@@ -1,27 +1,25 @@
 blueprint:
   name: Turn On/Off a Light/Switch at a fixed time each days
-  description: |
-    Turn On/Off Switch/Light at a fixed time each days.
-    
+  description: Turn on/off a light / switch at a fixed time each days.Exemple with Carnivorous plant's Terrarium swith on at 2:30pm, switch off 2:30am each days.
   domain: automation
   source_url: https://github.com/Agezeram-Fr/hass-switch-light-on-off-terra/blob/main/switch-light-on-off-terra.yaml
   author: Agezeram
   input:
-    switch_light_entity:
-        name: Switch / Light Entity
+    switch_light:
+        name: Switch / Light
         selector:
             entity:
                 domain:
                   - switch
                   - light
     
-    sl_on:
+    on_time:
       name: ON Time
       description: Set ON time.
       default: 00:00:00
       selector:
        time:
-    sl_off:
+    off_time:
       name: OFF Time
       description: Set OFF time.
       default: 00:00:00
@@ -35,19 +33,19 @@ description: "Carnivorous plant's Terrarium swith on at 2:30pm, switch off 2:30a
 #mode: restart
 
 variables:
-  sl_on: !input sl_on
-  sl_off: !input sl_off
-  switch_light_entity: !input switch_light_entity
+  on_time: !input on_time
+  off_time: !input off_time
+  switch_light: !input switch_light
 
 trigger:
   - platform: time
     #at: "ontime"
-    at: !input sl_on
+    at: !input on_time
     #id: Switch-Light-ON
     id: "ontime"
   - platform: time
     #at: "offtime"
-    at: !input sl_off
+    at: !input off_time
     #id: Switch-Light-OFF
     id: "offtime"
 condition: []
@@ -60,7 +58,7 @@ action:
         sequence:
           - service: switch.turn_on
             data: {}
-            target: !input switch_light_entity
+            target: !input switch_light
       - conditions:
           - condition: trigger
             #id: Switch-Light-OFF
@@ -68,5 +66,5 @@ action:
         sequence:
           - service: switch.turn_off
             data: {}
-            target: !input switch_light_entity
+            target: !input switch_light
 mode: single
