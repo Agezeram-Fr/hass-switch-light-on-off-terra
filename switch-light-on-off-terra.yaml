@@ -9,10 +9,10 @@ blueprint:
         name: Switch / Light
         selector:
             entity:
-                #multiple: true
-                domain: 
-                  - switch
-                  - light
+                multiple: true
+                #domain: 
+                 # - switch
+                 # - light
                  # - scene
 
 
