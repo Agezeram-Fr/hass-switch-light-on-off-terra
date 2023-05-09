@@ -13,7 +13,10 @@ blueprint:
                   - switch
                   - light
                   - scene
-                #device_class: all_switches
+                 device_class: 
+                   - all_switches
+                   - all_lights
+                   - all_scenes
 
     light_switch:
       name: Lights - Switches - Scenes *
