@@ -9,8 +9,11 @@ blueprint:
         name: Switch
         selector:
             entity:
-                domain: switch
-                device_class: all_switches
+                domain: 
+                  - switch
+                  - light
+                  - scene
+                #device_class: all_switches
 
     light_switch:
       name: Lights - Switches - Scenes *
