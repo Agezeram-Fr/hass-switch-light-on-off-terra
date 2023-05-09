@@ -29,18 +29,19 @@ blueprint:
               value: "time_enabled"
             - label: Disable the time options
               value: "time_disabled"
-      on_time:
-        name: ON Time
-        description: Set ON time.
-        default: 00:00:00
-        selector:
-          time:
-      off_time:
-        name: OFF Time
-        description: Set OFF time.
-        default: 00:00:00
-        selector:
-          time:
+    
+    on_time:
+      name: ON Time
+      description: Set ON time.
+      default: 00:00:00
+      selector:
+       time:
+    off_time:
+      name: OFF Time
+      description: Set OFF time.
+      default: 00:00:00
+      selector:
+        time:
 
 
 alias: TERRA120 ON/OFF (14h30->02h30)(12H light)
