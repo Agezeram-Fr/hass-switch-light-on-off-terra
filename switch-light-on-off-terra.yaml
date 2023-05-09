@@ -9,7 +9,7 @@ blueprint:
         name: Switch
         selector:
             entity:
-                #multiple: true
+                multiple: true
                 domain: 
                   - switch
                   - light
