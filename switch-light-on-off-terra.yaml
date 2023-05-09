@@ -6,7 +6,7 @@ blueprint:
   author: Agezeram
   input:
     switch_entity:
-        name: Switch
+        name: Switch / Light
         selector:
             entity:
                 #multiple: true
