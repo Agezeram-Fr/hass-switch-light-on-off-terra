@@ -15,20 +15,6 @@ blueprint:
                   - light
                   #- scene
                  #multiple: true
-    include_time:
-      name: Use The Time Options (Optional)
-      description: Use the "Start Time", "End Time" and "Weekdays" values to only run the automation between the time periods.
-        All the time settings are a global condition and can work alongside with the other options. You don't need to enable this option
-        for night lights to work. For more information on time settings 
-        [Click Here](https://community.home-assistant.io/t/481048/310)
-      default: time_disabled
-      selector:
-        select:
-          options:
-            - label: Enable the time options
-              value: "time_enabled"
-            - label: Disable the time options
-              value: "time_disabled"
     
     slon_time:
       name: ON Time
