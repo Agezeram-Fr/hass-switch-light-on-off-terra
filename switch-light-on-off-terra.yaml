@@ -15,17 +15,42 @@ blueprint:
                   - light
                   #- scene
                  #multiple: true
-
+    include_time:
+      name: Use The Time Options (Optional)
+      description: Use the "Start Time", "End Time" and "Weekdays" values to only run the automation between the time periods.
+        All the time settings are a global condition and can work alongside with the other options. You don't need to enable this option
+        for night lights to work. For more information on time settings 
+        [Click Here](https://community.home-assistant.io/t/481048/310)
+      default: time_disabled
+      selector:
+        select:
+          options:
+            - label: Enable the time options
+              value: "time_enabled"
+            - label: Disable the time options
+              value: "time_disabled"
+    after_time:
+      name: Start Time
+      description: Set the start time.
+      default: 00:00:00
+      selector:
+        time:
+    before_time:
+      name: End Time
+      description: Set the end time.
+      default: 00:00:00
+      selector:
+        time:
 
 
 alias: TERRA120 ON/OFF (14h30->02h30)(12H light)
 description: "Carnivorous plant's Terrarium swith on at 2:30pm, switch off 2:30am each days"
 trigger:
   - platform: time
-    at: "14:30:00"
+    at: "ontime"
     id: Switch-Light-ON
   - platform: time
-    at: "02:30:00"
+    at: "offtime"
     id: Switch-Light-OFF
 condition: []
 action:
