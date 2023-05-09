@@ -81,7 +81,13 @@ trigger:
     #weekday: !input weekday_options
     #id: Switch-Light-OFF
     id: "offtime"
-condition: []
+#condition: []
+condition:
+- condition: and
+  conditions:
+  - condition: time
+    weekday: !input weekday_options
+
 #condition:
  # condition: time
   #  weekday: !input weekday_options
