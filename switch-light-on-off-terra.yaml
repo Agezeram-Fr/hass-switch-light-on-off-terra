@@ -80,15 +80,17 @@ trigger:
     at: !input sl_off
     #id: Switch-Light-OFF
     id: "offtime"
-condition: 
-  weekday: !input weekday_options
-  
+#condition: 
+#  weekday: !input weekday_options
+condition: []
+
 action:
   - choose:
       - conditions:
           - condition: trigger
             #id: Switch-Light-ON
             id: "ontime"
+            weekday: !input weekday_options
         sequence:
           - service: switch.turn_on
             data: {}
@@ -97,6 +99,7 @@ action:
           - condition: trigger
             #id: Switch-Light-OFF
             id: "offtime"
+            weekday: !input weekday_options
         sequence:
           - service: switch.turn_off
             data: {}
