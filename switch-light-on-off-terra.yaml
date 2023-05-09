@@ -67,6 +67,7 @@ variables:
   sl_on: !input sl_on
   sl_off: !input sl_off
   switch_light: !input switch_light
+  weekday_options: !input weekday_options
 
 trigger:
   - platform: time
