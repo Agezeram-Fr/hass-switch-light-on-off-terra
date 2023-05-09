@@ -58,9 +58,7 @@ blueprint:
               value: "sun"
 
 # Automation schema
-#alias: TERRA120 ON/OFF (14h30->02h30)(12H light)
 description: "BASE-OK_03_TIME_and_DAYS"
-#mode: restart
 
 variables:
   sl_on: !input sl_on
@@ -70,33 +68,18 @@ variables:
 
 trigger:
   - platform: time
-    #at: "ontime"
     at: !input sl_on
-    #weekday: !input weekday_options
-    #id: Switch-Light-ON
     id: "ontime"
   - platform: time
-    #at: "offtime"
     at: !input sl_off
-    #weekday: !input weekday_options
-    #id: Switch-Light-OFF
     id: "offtime"
-#condition: []
 condition:
-#- condition: and
-#  conditions:
 - condition: time
   weekday: !input weekday_options
-
-#condition:
- # condition: time
-  #  weekday: !input weekday_options
-
 action:
   - choose:
       - conditions:
           - condition: trigger
-            #id: Switch-Light-ON
             id: "ontime"
         sequence:
           - service: switch.turn_on
@@ -105,7 +88,6 @@ action:
               entity_id: !input switch_light
       - conditions:
           - condition: trigger
-            #id: Switch-Light-OFF
             id: "offtime"
         sequence:
           - service: switch.turn_off
