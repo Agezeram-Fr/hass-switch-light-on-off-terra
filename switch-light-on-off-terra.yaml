@@ -29,13 +29,13 @@ blueprint:
               value: "time_enabled"
             - label: Disable the time options
               value: "time_disabled"
-    after_time:
+    on_time:
       name: ON Time
       description: Set ON time.
       default: 00:00:00
       selector:
         time:
-    before_time:
+    off_time:
       name: OFF Time
       description: Set OFF time.
       default: 00:00:00
@@ -45,19 +45,29 @@ blueprint:
 
 alias: TERRA120 ON/OFF (14h30->02h30)(12H light)
 description: "Carnivorous plant's Terrarium swith on at 2:30pm, switch off 2:30am each days"
+
+variables:
+  on_time: !input on_time
+  off_time: !include off_time
+
 trigger:
   - platform: time
-    at: "ontime"
-    id: Switch-Light-ON
+    #at: "ontime"
+    at: !input on_time
+    #id: Switch-Light-ON
+    id: "ontime"
   - platform: time
-    at: "offtime"
-    id: Switch-Light-OFF
+    #at: "offtime"
+    at: !input off_time
+    #id: Switch-Light-OFF
+    id: "offtime"
 condition: []
 action:
   - choose:
       - conditions:
           - condition: trigger
-            id: Switch-Light-ON
+            #id: Switch-Light-ON
+            id: "ontime"
         sequence:
           - service: switch.turn_on
             data: {}
@@ -66,7 +76,8 @@ action:
                 - switch.terra120
       - conditions:
           - condition: trigger
-            id: Switch-Light-OFF
+            #id: Switch-Light-OFF
+            id: "offtime"
         sequence:
           - service: switch.turn_off
             data: {}
