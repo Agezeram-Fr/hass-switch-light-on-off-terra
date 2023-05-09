@@ -29,7 +29,7 @@ blueprint:
         time:
     weekday_options:
       name: Weekdays
-      description: Select the days of the week you would like the automation to run. You must select "Enable the time options" above for the weekdays selections to work.
+      description: Select the days of the week you would like the automation to run.
       default:
         - mon
         - tue
