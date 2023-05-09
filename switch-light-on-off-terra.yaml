@@ -30,14 +30,14 @@ blueprint:
             - label: Disable the time options
               value: "time_disabled"
     after_time:
-      name: Start Time
-      description: Set the start time.
+      name: ON Time
+      description: Set ON time.
       default: 00:00:00
       selector:
         time:
     before_time:
-      name: End Time
-      description: Set the end time.
+      name: OFF Time
+      description: Set OFF time.
       default: 00:00:00
       selector:
         time:
