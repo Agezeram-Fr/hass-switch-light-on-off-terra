@@ -58,7 +58,8 @@ action:
         sequence:
           - service: switch.turn_on
             data: {}
-            target: !input switch_light
+            target:
+              entity_id: !input switch_light
       - conditions:
           - condition: trigger
             #id: Switch-Light-OFF
@@ -66,5 +67,6 @@ action:
         sequence:
           - service: switch.turn_off
             data: {}
-            target: !input switch_light
+            target:
+              entity_id: !input switch_light
 mode: single
