@@ -1,7 +1,7 @@
 blueprint:
   name: Turn On/Off a Light/Switch at a fixed time from selected days.
   description: |
-  👋 Turn On/Off a Light/Switch at a fixed time each days or selected days 👋
+  Turn On/Off a Light/Switch at a fixed time each days or selected days
   
   Installation - use IMPORT BLUEPRINT button from README.md
   
