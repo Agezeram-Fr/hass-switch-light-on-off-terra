@@ -30,13 +30,13 @@ blueprint:
             - label: Disable the time options
               value: "time_disabled"
     
-    on_time:
+    slon_time:
       name: ON Time
       description: Set ON time.
       default: 00:00:00
       selector:
        time:
-    off_time:
+    sloff_time:
       name: OFF Time
       description: Set OFF time.
       default: 00:00:00
@@ -48,8 +48,8 @@ alias: TERRA120 ON/OFF (14h30->02h30)(12H light)
 description: "Carnivorous plant's Terrarium swith on at 2:30pm, switch off 2:30am each days"
 
 variables:
-  on_time: !input on_time
-  off_time: !include off_time
+  slon_time: !input slon_time
+  sloff_time: !include sloff_time
   switch_light: !include switch_light
 
 trigger:
