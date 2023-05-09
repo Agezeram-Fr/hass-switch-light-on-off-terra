@@ -72,16 +72,20 @@ trigger:
   - platform: time
     #at: "ontime"
     at: !input sl_on
-    weekday: !input weekday_options
+    #weekday: !input weekday_options
     #id: Switch-Light-ON
     id: "ontime"
   - platform: time
     #at: "offtime"
     at: !input sl_off
-    weekday: !input weekday_options
+    #weekday: !input weekday_options
     #id: Switch-Light-OFF
     id: "offtime"
-condition: []
+#condition: []
+condition:
+  condition: time
+    weekday: !input weekday_options
+
 action:
   - choose:
       - conditions:
