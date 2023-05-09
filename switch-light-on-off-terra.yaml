@@ -26,7 +26,7 @@ blueprint:
       selector:
         time:
         
-    weekday_options:
+    weekdays_choice:
       name: Weekdays
       description: Select the days of the week you would like the automation to run.
       default:
@@ -64,7 +64,7 @@ variables:
   sl_on: !input sl_on
   sl_off: !input sl_off
   switch_light: !input switch_light
-  weekday_options: !input weekday_options
+  weekdays_choice: !input weekdays_choice
 
 trigger:
   - platform: time
@@ -75,7 +75,7 @@ trigger:
     id: "offtime"
 condition:
 - condition: time
-  weekday: !input weekday_options
+  weekday: !input weekdays_choice
 action:
   - choose:
       - conditions:
