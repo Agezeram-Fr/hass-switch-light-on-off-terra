@@ -73,11 +73,13 @@ trigger:
   - platform: time
     #at: "ontime"
     at: !input sl_on
+    weekday: !input weekday_options
     #id: Switch-Light-ON
     id: "ontime"
   - platform: time
     #at: "offtime"
     at: !input sl_off
+    weekday: !input weekday_options
     #id: Switch-Light-OFF
     id: "offtime"
 condition: []
@@ -87,7 +89,6 @@ action:
           - condition: trigger
             #id: Switch-Light-ON
             id: "ontime"
-            weekday: !input weekday_options
         sequence:
           - service: switch.turn_on
             data: {}
@@ -97,7 +98,6 @@ action:
           - condition: trigger
             #id: Switch-Light-OFF
             id: "offtime"
-            weekday: !input weekday_options
         sequence:
           - service: switch.turn_off
             data: {}
