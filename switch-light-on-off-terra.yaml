@@ -29,11 +29,6 @@ blueprint:
       selector:
         time:
 
-#variables:
-  #slon: !input slon
-  #sloff: !include sloff
- # switch_light: !include switch_light
-
 alias: TERRA120 ON/OFF (14h30->02h30)(12H light)
 description: "Carnivorous plant's Terrarium swith on at 2:30pm, switch off 2:30am each days"
 
