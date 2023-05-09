@@ -13,7 +13,7 @@ blueprint:
                   - switch
                   - light
     
-    sl_one:
+    sl_on:
       name: ON Time
       description: Set ON time.
       default: 00:00:00
