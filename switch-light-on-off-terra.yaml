@@ -15,20 +15,6 @@ blueprint:
                   - light
                  # - scene
 
-    light_switch:
-      name: Lights - Switches - Scenes *
-      description: The lights that get turned on by the trigger sensor/s. You can also add switches and scenes.
-        If adding a scene please read "Scenes To Turn OFF" below.
-
-        **NOTE** - You can only use entities. Areas and devices are not supported.
-      selector:
-        target:
-          entity:
-            domain: 
-              - light
-              - switch
-              - scene
- 
 
 
 alias: TERRA120 ON/OFF (14h30->02h30)(12H light)
