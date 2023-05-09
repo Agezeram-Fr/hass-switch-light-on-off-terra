@@ -15,7 +15,6 @@ blueprint:
                   - light
                   - scene
 
-
     light_switch:
       name: Lights - Switches - Scenes *
       description: The lights that get turned on by the trigger sensor/s. You can also add switches and scenes.
