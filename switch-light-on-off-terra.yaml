@@ -28,7 +28,8 @@ blueprint:
         
     weekday_options:
       name: Weekdays
-      description: Select the days of the week you would like the automation to run.
+      description: Select the days of the week you would like the automation to run.|
+                    dfsdfdsfsdfs
       default:
         - mon
         - tue
