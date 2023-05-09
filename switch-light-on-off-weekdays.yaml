@@ -1,7 +1,7 @@
 blueprint:
   name: Turn On/Off a Light/Switch at a fixed time from selected days.
   description: 👋 Turn On/Off a Light/Switch at a fixed time each days or selected days 👋
-  ✏️ Installation  ✏️
+  ✏️ **Installation:**  ✏️
   ℹ️ **Version: 1.2** / 05/2023 ℹ️
   🔨    🔨
   domain: automation
