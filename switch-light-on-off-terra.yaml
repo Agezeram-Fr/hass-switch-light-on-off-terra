@@ -60,7 +60,7 @@ blueprint:
 
 # Automation schema
 #alias: TERRA120 ON/OFF (14h30->02h30)(12H light)
-description: "BASE-OK_01"
+description: "test"
 #mode: restart
 
 variables:
