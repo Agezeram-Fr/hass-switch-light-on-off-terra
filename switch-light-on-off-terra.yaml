@@ -10,7 +10,7 @@ blueprint:
         selector:
             entity:
                 domain: switch
-                device_class: switch
+                device_class: all_switches
                 
 alias: TERRA120 ON/OFF (14h30->02h30)(12H light)
 description: "Carnivorous plant's Terrarium swith on at 2:30pm, switch off 2:30am each days"
