@@ -9,12 +9,9 @@ blueprint:
         name: Switch / Light
         selector:
             entity:
-                #multiple: true
                 domain:
                   - switch
                   - light
-                  #- scene
-                 #multiple: true
     
     on_time:
       name: ON Time
@@ -38,7 +35,7 @@ description: "Carnivorous plant's Terrarium swith on at 2:30pm, switch off 2:30a
 variables:
   on_time: !input on_time
   off_time: !input off_time
-  switch_entity: !input switch_entity
+  switch_light: !input switch_light
 
 trigger:
   - platform: time
