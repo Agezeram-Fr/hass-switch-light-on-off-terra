@@ -49,6 +49,7 @@ description: "Carnivorous plant's Terrarium swith on at 2:30pm, switch off 2:30a
 variables:
   on_time: !input on_time
   off_time: !include off_time
+  switch_entity: !include switch_entity
 
 trigger:
   - platform: time
