@@ -1,7 +1,6 @@
 blueprint:
-  name: Switch / Light ON/OFF
-  description: Turn on/off a light / switch at a fixed time each days.
-                 Exemple with Carnivorous plant's Terrarium swith on at 2:30pm, switch off 2:30am each days.
+  name: Turn On/Off a Light/Switch at a fixed time each days
+  description: Turn on/off a light / switch at a fixed time each days.Exemple with Carnivorous plant's Terrarium swith on at 2:30pm, switch off 2:30am each days.
   domain: automation
   source_url: https://github.com/Agezeram-Fr/hass-switch-light-on-off-terra/blob/main/switch-light-on-off-terra.yaml
   author: Agezeram
