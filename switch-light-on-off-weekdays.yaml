@@ -2,7 +2,7 @@ blueprint:
   name: Turn On/Off a Light/Switch at a fixed time from selected days.
   description: 👋 Turn On/Off a Light/Switch at a fixed time each days or selected days 👋
   ✏️ Installation - use IMPORT BLUEPRINT button from README.md✏️
-  ℹ️ Version 1.2 - 05/2023 ℹ️
+  ℹ️ Ver1.2 - 05/2023 ℹ️
   🔨    🔨
   domain: automation
   source_url: https://github.com/Agezeram-Fr/hass-switch-light-on-off-weekdays/blob/main/switch-light-on-off-weekdays.yaml
