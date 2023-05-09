@@ -16,7 +16,6 @@ blueprint:
                   #- scene
                  #multiple: true
     
-    
     slon:
       name: ON Time
       description: Set ON time.
@@ -37,8 +36,6 @@ variables:
 
 alias: TERRA120 ON/OFF (14h30->02h30)(12H light)
 description: "Carnivorous plant's Terrarium swith on at 2:30pm, switch off 2:30am each days"
-
-
 
 trigger:
   - platform: time
