@@ -83,10 +83,10 @@ trigger:
     id: "offtime"
 #condition: []
 condition:
-- condition: and
-  conditions:
-  - condition: time
-    weekday: !input weekday_options
+#- condition: and
+#  conditions:
+- condition: time
+  weekday: !input weekday_options
 
 #condition:
  # condition: time
