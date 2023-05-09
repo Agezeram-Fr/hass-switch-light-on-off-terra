@@ -13,13 +13,13 @@ blueprint:
                   - switch
                   - light
     
-    on_time:
+    sl_on:
       name: ON Time
       description: Set ON time.
       default: 00:00:00
       selector:
        time:
-    off_time:
+    sl_off:
       name: OFF Time
       description: Set OFF time.
       default: 00:00:00
@@ -33,19 +33,19 @@ description: "Carnivorous plant's Terrarium swith on at 2:30pm, switch off 2:30a
 #mode: restart
 
 variables:
-  on_time: !input on_time
-  off_time: !input off_time
+  sl_on: !input sl_on
+  sl_off: !input sl_off
   switch_light: !input switch_light
 
 trigger:
   - platform: time
     #at: "ontime"
-    at: !input on_time
+    at: !input sl_on
     #id: Switch-Light-ON
     id: "ontime"
   - platform: time
     #at: "offtime"
-    at: !input off_time
+    at: !input sl_off
     #id: Switch-Light-OFF
     id: "offtime"
 condition: []
