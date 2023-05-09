@@ -5,7 +5,7 @@ blueprint:
   source_url: https://github.com/Agezeram-Fr/hass-switch-light-on-off-terra/blob/main/switch-light-on-off-terra.yaml
   author: Agezeram
   input:
-    switch_entity:
+    switch_light:
         name: Switch / Light
         selector:
             entity:
@@ -50,7 +50,7 @@ description: "Carnivorous plant's Terrarium swith on at 2:30pm, switch off 2:30a
 variables:
   on_time: !input on_time
   off_time: !include off_time
-  switch_entity: !include switch_entity
+  switch_light: !include switch_light
 
 trigger:
   - platform: time
