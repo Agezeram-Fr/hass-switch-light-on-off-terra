@@ -28,8 +28,8 @@ blueprint:
 
 
 # Automation schema
-alias: TERRA120 ON/OFF (14h30->02h30)(12H light)
-description: "Carnivorous plant Terrarium swith on at 2:30pm, switch off 2:30am each days"
+#alias: TERRA120 ON/OFF (14h30->02h30)(12H light)
+#description: "Carnivorous plant Terrarium swith on at 2:30pm, switch off 2:30am each days"
 #mode: restart
 
 variables:
