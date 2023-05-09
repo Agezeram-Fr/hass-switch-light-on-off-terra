@@ -2,7 +2,7 @@ blueprint:
   name: Turn On/Off a Light/Switch at a fixed time from selected days.
   description: Turn On/Off a Light/Switch at a fixed time each days or selected days.
   domain: automation
-  source_url: https://github.com/Agezeram-Fr/hass-switch-light-on-off-terra/blob/main/switch-light-on-off-weekdays.yaml
+  source_url: https://github.com/Agezeram-Fr/hass-switch-light-on-off-weekdays/blob/main/switch-light-on-off-weekdays.yaml
   author: Agezeram
   input:
     switch_light:
