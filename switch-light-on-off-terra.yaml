@@ -4,7 +4,14 @@ blueprint:
   domain: automation
   source_url: https://github.com/Agezeram-Fr/hass-switch-light-on-off-terra/blob/main/switch-light-on-off-terra.yaml
   author: Agezeram
-
+  input:
+    switch_entity:
+        name: Switch
+        selector:
+            entity:
+                domain: switch
+                device_class: switch
+                
 alias: TERRA120 ON/OFF (14h30->02h30)(12H light)
 description: "Carnivorous plant's Terrarium swith on at 2:30pm, switch off 2:30am each days"
 trigger:
