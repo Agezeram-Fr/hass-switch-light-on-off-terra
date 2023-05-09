@@ -16,32 +16,38 @@ blueprint:
                   #- scene
                  #multiple: true
     
-    slon:
+    on_time:
       name: ON Time
       description: Set ON time.
       default: 00:00:00
       selector:
        time:
-    sloff:
+    off_time:
       name: OFF Time
       description: Set OFF time.
       default: 00:00:00
       selector:
         time:
-
+        
+# Automation schema
 alias: TERRA120 ON/OFF (14h30->02h30)(12H light)
 description: "Carnivorous plant's Terrarium swith on at 2:30pm, switch off 2:30am each days"
 #mode: restart
 
+variables:
+  on_time: !input on_time
+  off_time: !input off_time
+  switch_entity: !input switch_entity
+
 trigger:
   - platform: time
     #at: "ontime"
-    at: !input slon
+    at: !input on_time
     #id: Switch-Light-ON
     id: "ontime"
   - platform: time
     #at: "offtime"
-    at: !input sloff
+    at: !input off_time
     #id: Switch-Light-OFF
     id: "offtime"
 condition: []
