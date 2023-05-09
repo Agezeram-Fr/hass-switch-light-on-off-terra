@@ -27,7 +27,36 @@ blueprint:
       default: 00:00:00
       selector:
         time:
-
+    weekday_options:
+      name: Weekdays
+      description: Select the days of the week you would like the automation to run. You must select "Enable the time options" above for the weekdays selections to work.
+      default:
+        - mon
+        - tue
+        - wed
+        - thu
+        - fri
+        - sat
+        - sun
+      selector:
+        select:
+          multiple: true
+          mode: list
+          options:
+            - label: Monday
+              value: "mon"
+            - label: Tuesday
+              value: "tue"
+            - label: Wednesday
+              value: "wed"
+            - label: Thursday
+              value: "thu"
+            - label: Friday
+              value: "fri"
+            - label: Saturday
+              value: "sat"
+            - label: Sunday
+              value: "sun"
 
 # Automation schema
 alias: TERRA120 ON/OFF (14h30->02h30)(12H light)
@@ -38,7 +67,8 @@ variables:
   sl_on: !input sl_on
   sl_off: !input sl_off
   switch_light_entity: !input switch_light_entity
-
+  weekday_options: !input weekday_options
+  
 trigger:
   - platform: time
     #at: "ontime"
@@ -50,7 +80,9 @@ trigger:
     at: !input sl_off
     #id: Switch-Light-OFF
     id: "offtime"
-condition: []
+condition: 
+  weekday: !input weekday_options
+  
 action:
   - choose:
       - conditions:
