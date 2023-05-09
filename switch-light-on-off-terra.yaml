@@ -14,9 +14,9 @@ blueprint:
                   - light
                   - scene
                  device_class: 
-                   - all_switches
-                   - all_lights
-                   - all_scenes
+                   - switch
+                   - light
+                   - scene
 
     light_switch:
       name: Lights - Switches - Scenes *
